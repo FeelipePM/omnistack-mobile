@@ -30,10 +30,14 @@ export default class Box extends Component {
       <View style={styles.fileInfo}>
         <Icon name="insert-drive-file" size={24} color="#A5CFFF" />
         <Text style={styles.fileTitle}>{item.title}</Text>
-        <Text style={styles.fileDate}>
-          Há{""} {distanceInWords(item.createdAt, new Date(), { locale: pt })}
-        </Text>
       </View>
+
+      <Text style={styles.fileDate}>
+        Há{" "}
+        {distanceInWords(item.createdAt, new Date(), {
+          locale: pt
+        })}
+      </Text>
     </TouchableOpacity>
   );
 
